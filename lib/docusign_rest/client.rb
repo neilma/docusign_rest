@@ -300,6 +300,7 @@ module DocusignRest
         'recipientEvents' => Array(event_notification[:recipient_events]).map do |recipient_event|
           {
             includeDocuments:         recipient_event[:include_documents] || false,
+            includeDocumentFields:    recipient_event[:include_document_fields] || false,
             recipientEventStatusCode: recipient_event[:recipient_event_status_code]
           }
         end
